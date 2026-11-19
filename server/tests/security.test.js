@@ -23,7 +23,8 @@ describe('Security & Vulnerability Protection Tests', () => {
       const res = await fetch(`${BASE_URL}/plan`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ aqiData: { aqi: 100 }, excessiveField: largeString })\n      });
+        body: JSON.stringify({ aqiData: { aqi: 100 }, excessiveField: largeString })
+      });
       // Express body-parser with limit: '250kb' rejects with 413 Payload Too Large
       assert.strictEqual(res.status, 413);
     } catch (err) {
