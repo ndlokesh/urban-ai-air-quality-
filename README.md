@@ -115,8 +115,8 @@ CleanBreath discloses all underlying environmental engineering assumptions direc
 
 ### 1. Clone & Install
 ```bash
-git clone <repo-url>
-cd "challange 6"
+git clone https://github.com/ndlokesh/urban-ai-air-quality-.git
+cd urban-ai-air-quality-
 
 # Install root, server, and client dependencies
 npm run install:all
@@ -139,11 +139,11 @@ npm run dev
 - Frontend opens at: `http://localhost:5173`
 - Backend API runs at: `http://localhost:5000`
 
-### 4. Run Unit Tests
+### 4. Run Automated Test Suite
 ```bash
 npm test
 ```
-Runs 8 automated unit tests verifying AQI-band breakpoint math, color tokens, and impact calculation formulas.
+Runs 25 automated tests across 6 test suites verifying AQI-band breakpoint math, E2E flows, security, cache efficiency, and WCAG accessibility.
 
 ---
 
@@ -187,14 +187,14 @@ gcloud run deploy cleanbreath \
 1. Create a `vercel.json` in the root:
 ```json
 {
-  \"version\": 2,
-  \"builds\": [
-    { \"src\": \"client/package.json\", \"use\": \"@vercel/static-build\", \"config\": { \"distDir\": \"dist\" } },
-    { \"src\": \"server/src/server.js\", \"use\": \"@vercel/node\" }
+  "version": 2,
+  "builds": [
+    { "src": "client/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } },
+    { "src": "server/src/server.js", "use": "@vercel/node" }
   ],
-  \"routes\": [
-    { \"src\": \"/api/(.*)\", \"dest\": \"/server/src/server.js\" },
-    { \"src\": \"/(.*)\", \"dest\": \"/client/$1\" }
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/server/src/server.js" },
+    { "src": "/(.*)", "dest": "/client/$1" }
   ]
 }
 ```
@@ -203,7 +203,7 @@ gcloud run deploy cleanbreath \
 ---
 
 ## Hackathon Demo Script
-A complete 60-90 second presentation script is available in [docs/demo.md](file:///c:/Users/Lokesh/OneDrive/Desktop/challange%206/docs/demo.md).
+A complete 60-90 second presentation script is available in [docs/demo.md](docs/demo.md).
 
 ---
 
