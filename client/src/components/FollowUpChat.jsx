@@ -98,7 +98,9 @@ export default function FollowUpChat({
           text: isHindi
             ? 'क्षमा करें, संदेश भेजने में समस्या हुई। कृपया पुनः प्रयास करें।'
             : 'Sorry, I encountered an issue retrieving the response. Please try again.',
-          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })\r\n        }\r\n      ]);
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        }
+      ]);
     } finally {
       setIsSending(false);
     }
