@@ -46,7 +46,8 @@ export default function LocationSearch({ onSelectLocation, onManualSubmit, isLoa
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);\n  }, []);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleSelect = (loc) => {
     setQuery(loc.displayName || loc.name);
@@ -58,7 +59,9 @@ export default function LocationSearch({ onSelectLocation, onManualSubmit, isLoa
     if (!navigator.geolocation) {
       alert('Geolocation is not supported by your browser.');
       return;
-    }\n\n    setGeoLocating(true);
+    }
+
+    setGeoLocating(true);
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         setGeoLocating(false);

@@ -75,7 +75,8 @@ export default function FamilyShareModal({ isOpen, onClose, aqiData, profile, pl
             <div className="font-bold text-white mb-1">
               {isHindi ? 'आज के 3 जरूरी सुरक्षा नियम:' : "Today's Top 3 Safety Rules:"}
             </div>
-            {topActions.map((act, i) => (\n              <div key={i} className="flex items-start space-x-2">
+            {topActions.map((act, i) => (
+              <div key={i} className="flex items-start space-x-2">
                 <span className="text-emerald-400 font-bold">{i + 1}.</span>
                 <span>{act}</span>
               </div>

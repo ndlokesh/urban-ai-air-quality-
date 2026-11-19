@@ -25,7 +25,8 @@ export default function ActionPlanView({ plan, language }) {
   const swaps = plan.sustainableAlternatives || [];
   const explainer = plan.impactExplainer || [];
 
-  const tabs = [\n    { id: 'risk', label: t.tabRisk, icon: AlertCircle },
+  const tabs = [
+    { id: 'risk', label: t.tabRisk, icon: AlertCircle },
     { id: 'routine', label: t.tabRoutine, icon: Clock },
     { id: 'hacks', label: t.tabHacks, icon: Sparkles },
     { id: 'swaps', label: t.tabSwaps, icon: RefreshCw },
@@ -74,7 +75,8 @@ export default function ActionPlanView({ plan, language }) {
       </div>
 
       {/* Tab 1: Today's Risk Summary */}
-      {activeTab === 'risk' && (\n        <div className="space-y-4 animate-in fade-in duration-300">
+      {activeTab === 'risk' && (
+        <div className="space-y-4 animate-in fade-in duration-300">
           <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-3">
             <h3 className="text-base font-bold text-amber-950 flex items-center space-x-2">
               <AlertCircle className="w-5 h-5 text-amber-600" />

@@ -98,9 +98,7 @@ export default function FollowUpChat({
           text: isHindi
             ? 'क्षमा करें, संदेश भेजने में समस्या हुई। कृपया पुनः प्रयास करें।'
             : 'Sorry, I encountered an issue retrieving the response. Please try again.',
-          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        }
-      ]);
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })\r\n        }\r\n      ]);
     } finally {
       setIsSending(false);
     }
@@ -193,7 +191,8 @@ export default function FollowUpChat({
           Suggested Questions:
         </span>
         <div className="flex flex-wrap gap-1.5">
-          {quickPrompts.map((q, idx) => (\n            <button
+          {quickPrompts.map((q, idx) => (
+            <button
               key={idx}
               type="button"
               onClick={() => handleSend(q)}
